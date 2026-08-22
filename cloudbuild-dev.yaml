@@ -1,3 +1,5 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
 steps:
   # Step 1: Compile the Go Application
   - name: 'gcr.io/cloud-builders/go'
@@ -24,3 +26,4 @@ steps:
     args: ['-n', 'dev', 'apply', '-f', 'dev/deployment.yaml']
     env:
     - 'CLOUDSDK_COMPUTE_REGION=us-west1-a'
+
